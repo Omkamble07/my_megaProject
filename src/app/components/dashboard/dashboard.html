@@ -1,0 +1,25 @@
+<div *ngIf="!result" class="card-soft">
+  <h4>No analysis found</h4>
+  <p class="small-muted">Upload an image first — go to <a routerLink="/upload">Upload</a>.</p>
+</div>
+
+<div *ngIf="result" class="card-soft">
+  <h3>Analysis Result</h3>
+  <p><strong>Product:</strong> {{result.product}}</p>
+  <p><strong>Quality:</strong> {{result.quality}} ({{ (result.confidence * 100) | number:'1.0-0'}}%)</p>
+  <p><strong>Suggested use:</strong> {{result.suggested_use}}</p>
+
+  <h5 class="mt-3">Suggested Buyers</h5>
+  <ul>
+    <li *ngFor="let b of result.suggested_buyers">{{b.name}} — {{b.distance}} — {{b.contact}} — {{b.location}}</li>
+  </ul>
+
+  <h5 class="mt-3">Suggested Transport</h5>
+  <ul>
+    <li *ngFor="let t of result.suggested_transport">{{t.name}} — {{t.vehicle}} — {{t.charges}} — {{t.contact}}</li>
+  </ul>
+
+  <div class="mt-3">
+    <button class="btn btn-outline-custom" (click)="download()">Download JSON</button>
+  </div>
+</div>

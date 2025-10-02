@@ -1,0 +1,21 @@
+<div class="card-soft">
+  <h3>Upload Crop Image</h3>
+  <p class="small-muted">Take a photo of the tomato or upload from gallery. Add GPS location for nearby market suggestions.</p>
+
+  <div class="mb-3">
+    <input type="file" accept="image/*" (change)="onFileChange($event)" class="form-control" />
+  </div>
+
+  <div *ngIf="previewUrl" class="mb-3 text-center">
+    <img [src]="previewUrl" class="img-preview" />
+  </div>
+
+  <div class="mb-2">
+    <button class="btn btn-outline-custom me-2" (click)="getLocation()">Use My Location</button>
+    <small *ngIf="lat" class="small-muted">Lat: {{lat}} • Lng: {{lng}}</small>
+  </div>
+
+  <div>
+    <button class="btn btn-primary-custom" (click)="submit()" [disabled]="uploading">{{ uploading ? 'Uploading...' : 'Analyze Image' }}</button>
+  </div>
+</div>

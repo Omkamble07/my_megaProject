@@ -1,0 +1,3 @@
+.fadeInUp{ animation: fadeUp .9s ease both; }
+@keyframes fadeUp{ from{ transform: translateY(12px); opacity:0; } to{ transform: translateY(0); opacity:1; } }
+.hero .card-soft{ border-left: 4px solid rgba(47,176,107,0.12); }

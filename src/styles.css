@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --green-1: #0f8a5f;
+  --green-2: #2fb06b;
+  --accent: #eafaf0;
+  --muted: #4a6b59;
+  --card-bg: rgba(255,255,255,0.95);
+}
+
+/* Reset fonts */
+body{
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background: linear-gradient(180deg, rgba(15,138,95,0.06), rgba(47,176,107,0.02));
+  color: #0b3b2b;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Navbar */
+.navbar-sticky{
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: linear-gradient(90deg, rgba(255,255,255,0.86), rgba(240,255,245,0.6));
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(9,48,28,0.04);
+}
+
+/* Cards & Buttons */
+.card-soft{
+  background: linear-gradient(180deg,var(--card-bg), #f8fff8);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(7,30,18,0.06);
+  padding: 1.25rem;
+}
+
+.btn-primary-custom{
+  background: linear-gradient(90deg,var(--green-1),var(--green-2));
+  border: none;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(47,176,107,0.18);
+}
+
+.btn-outline-custom{
+  border: 1px solid var(--green-1);
+  color: var(--green-1);
+  background: transparent;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+}
+.hero .headline {
+  color: #063b2f;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.hero .sub {
+  color: var(--muted);
+}
+
+/* Feature cards */
+.feature-icon {
+  width:56px;
+  height:56px;
+  border-radius:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(47,176,107,0.12), rgba(15,138,95,0.05));
+  font-size:22px;
+  color:var(--green-1);
+}
+
+/* Upload preview */
+.img-preview{
+  max-width:100%;
+  border-radius:10px;
+  box-shadow: 0 8px 20px rgba(7,30,18,0.06);
+}
+
+/* Small utilities */
+.small-muted{ color: var(--muted); font-size:0.95rem; }
+
+/* Footer */
+.footer{
+  padding: 2rem 0;
+  text-align:center;
+  color:#1b3f31;
+  margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .hero { padding: 2rem 0; }
+  .feature-icon{ width:48px; height:48px; }
+}

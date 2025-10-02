@@ -1,0 +1,3 @@
+.navbar-sticky .nav-link{ color: #145a43; font-weight:600; }
+.navbar-sticky .nav-link:hover{ color: var(--green-2); }
+.navbar-brand img{ border-radius:6px; }
